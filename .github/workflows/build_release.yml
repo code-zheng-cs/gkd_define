@@ -2,6 +2,8 @@ name: build_release
 
 on: workflow_dispatch
 
+permissions: write-all
+
 jobs:
   build_release:
     runs-on: ubuntu-latest
