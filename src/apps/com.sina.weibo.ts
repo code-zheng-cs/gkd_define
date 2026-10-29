@@ -48,5 +48,30 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 1,
+      name: '全屏广告-弹窗广告',
+      fastQuery: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: '.feed.MPDialogActivity',
+          matches:
+            'WebView[text="Wbox"] > View[childCount=1] >(1,2) View[childCount=2] > @TextView[clickable=true][visibleToUser=true][childCount=0][index=1][width<200] <<n [vid="container"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14969848',
+            'https://i.gkd.li/i/16944794',
+            'https://i.gkd.li/i/19807700',
+          ],
+        },
+        {
+          key: 1,
+          activityIds: '.feed.MPDialogActivity',
+          matches:
+            '@Image[text="close"] < View[childCount=4] <2 * <<n [vid="container"]',
+          snapshotUrls: 'https://i.gkd.li/i/14033735',
+        },
+      ],
+    },
   ],
 });
